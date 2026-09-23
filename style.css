@@ -56,7 +56,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
+    gap: 20px;
 }
 
 .logo {
@@ -72,15 +72,18 @@ header {
 /* Navigation */
 nav {
     display: flex;
-    gap: 22px;
-    flex-wrap: wrap;
+    gap: 16px;
+    flex-wrap: nowrap;
     justify-content: flex-end;
+    white-space: nowrap;
+    overflow-x: auto;
 }
 
 nav a {
-    font-size: 0.92rem;
-    letter-spacing: 0.4px;
+    font-size: 0.88rem;
+    letter-spacing: 0.3px;
     color: #51483f;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -364,7 +367,17 @@ footer a:hover {
     }
 
     nav {
-        gap: 10px;
+        width: 100%;
+        gap: 12px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px;
+    }
+
+    nav a {
+        flex-shrink: 0;
     }
 
     .grid,
