@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews - Illuminate Wedding Photography</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .review-container {
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .note {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .stars {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .stars input {
+            display: none;
+        }
+
+        .stars label {
+            font-size: 35px;
+            color: #ccc;
+            cursor: pointer;
+            margin: 0;
+        }
+
+        .stars input:checked ~ label {
+            color: #ccc;
+        }
+
+        .stars label:hover,
+        .stars label:hover ~ label {
+            color: gold;
+        }
+
+        .stars {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+
+        .stars input:checked + label,
+        .stars input:checked + label ~ label {
+            color: gold;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="review-container">
+
+        <h1>Previous Customer Review</h1>
+
+        <p class="note">
+            This review form is for our previous wedding photography customers.
+        </p>
+
+        <form>
+
+            <label for="name">Customer Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label for="wedding">Wedding Type</label>
+            <select id="wedding" name="wedding" required>
+                <option value="">Select Wedding Type</option>
+                <option value="Hindu">Hindu Wedding</option>
+                <option value="Muslim">Muslim Wedding</option>
+                <option value="Christian">Christian Wedding</option>
+                <option value="Traditional">Traditional Wedding</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label>Rate Our Photography</label>
+
+            <div class="stars">
+
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">★</label>
+
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">★</label>
+
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">★</label>
+
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">★</label>
+
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">★</label>
+
+            </div>
+
+            <label for="review">Your Review</label>
+            <textarea
+                id="review"
+                name="review"
+                placeholder="Share your experience with us..."
+                required
+            ></textarea>
+
+            <button type="submit">Submit Review</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
